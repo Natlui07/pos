@@ -1,0 +1,35 @@
+{
+  "name": "PaymentMethod",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre del m\u00e9todo de pago"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "efectivo",
+        "bancaria",
+        "cupon",
+        "cuenta_por_cobrar",
+        "nfc",
+        "otro"
+      ],
+      "description": "Tipo de m\u00e9todo de pago"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "M\u00e9todo activo"
+    },
+    "icon": {
+      "type": "string",
+      "description": "\u00cdcono del m\u00e9todo"
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ]
+}

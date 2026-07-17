@@ -1,0 +1,36 @@
+{
+  "name": "PrinterConfig",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre de la impresora"
+    },
+    "ip_address": {
+      "type": "string",
+      "description": "Direcci\u00f3n IP de la impresora"
+    },
+    "port": {
+      "type": "number",
+      "default": 9100,
+      "description": "Puerto de la impresora"
+    },
+    "is_default": {
+      "type": "boolean",
+      "default": false,
+      "description": "Impresora predeterminada"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "location": {
+      "type": "string",
+      "description": "Ubicaci\u00f3n de la impresora"
+    }
+  },
+  "required": [
+    "name",
+    "ip_address"
+  ]
+}

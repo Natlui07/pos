@@ -1,0 +1,96 @@
+{
+  "name": "Sale",
+  "type": "object",
+  "properties": {
+    "folio": {
+      "type": "string",
+      "description": "N\u00famero de folio del ticket"
+    },
+    "items": {
+      "type": "array",
+      "description": "Productos vendidos",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "product_name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "subtotal": {
+      "type": "number",
+      "description": "Subtotal de la venta"
+    },
+    "tax": {
+      "type": "number",
+      "description": "Impuestos"
+    },
+    "total": {
+      "type": "number",
+      "description": "Total de la venta"
+    },
+    "payment_method": {
+      "type": "string",
+      "description": "M\u00e9todo de pago usado"
+    },
+    "payment_method_type": {
+      "type": "string",
+      "description": "Tipo de m\u00e9todo de pago"
+    },
+    "cashier_email": {
+      "type": "string",
+      "description": "Email del cajero"
+    },
+    "cashier_name": {
+      "type": "string",
+      "description": "Nombre del cajero"
+    },
+    "waiter_email": {
+      "type": "string",
+      "description": "Email del mesero"
+    },
+    "waiter_name": {
+      "type": "string",
+      "description": "Nombre del mesero"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "completada",
+        "cancelada",
+        "modificada"
+      ],
+      "default": "completada",
+      "description": "Estado de la venta"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas adicionales"
+    },
+    "modification_reason": {
+      "type": "string",
+      "description": "Raz\u00f3n de modificaci\u00f3n"
+    },
+    "printer_id": {
+      "type": "string",
+      "description": "ID de impresora usada"
+    }
+  },
+  "required": [
+    "folio",
+    "total"
+  ]
+}

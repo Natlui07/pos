@@ -1,0 +1,36 @@
+{
+  "name": "WarehouseInventory",
+  "type": "object",
+  "properties": {
+    "warehouse_id": {
+      "type": "string",
+      "description": "ID del almac\u00e9n"
+    },
+    "warehouse_name": {
+      "type": "string",
+      "description": "Nombre del almac\u00e9n"
+    },
+    "product_id": {
+      "type": "string",
+      "description": "ID del producto"
+    },
+    "product_name": {
+      "type": "string",
+      "description": "Nombre del producto"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 0,
+      "description": "Cantidad en stock"
+    },
+    "unit_cost": {
+      "type": "number",
+      "description": "Costo unitario"
+    }
+  },
+  "required": [
+    "warehouse_id",
+    "product_id",
+    "quantity"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "WarehouseTransfer",
+  "type": "object",
+  "properties": {
+    "folio": {
+      "type": "string",
+      "description": "Folio del traspaso"
+    },
+    "from_warehouse_id": {
+      "type": "string",
+      "description": "Almac\u00e9n origen"
+    },
+    "from_warehouse_name": {
+      "type": "string"
+    },
+    "to_warehouse_id": {
+      "type": "string",
+      "description": "Almac\u00e9n destino"
+    },
+    "to_warehouse_name": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "description": "Productos traspasados",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "product_name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_cost": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendiente",
+        "completado",
+        "cancelado"
+      ],
+      "default": "completado"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "created_by_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "folio",
+    "from_warehouse_id",
+    "to_warehouse_id",
+    "items"
+  ]
+}

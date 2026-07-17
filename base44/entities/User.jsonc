@@ -1,0 +1,32 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "superadmin",
+        "admin",
+        "gerente",
+        "mesero",
+        "cajero"
+      ],
+      "default": "mesero",
+      "description": "Rol del usuario en el sistema"
+    },
+    "nfc_card_id": {
+      "type": "string",
+      "description": "ID de la tarjeta NFC asignada al usuario"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Tel\u00e9fono del usuario"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Estado activo del usuario"
+    }
+  },
+  "required": []
+}

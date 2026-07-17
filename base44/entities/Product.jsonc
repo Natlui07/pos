@@ -1,0 +1,39 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre del producto"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripci\u00f3n del producto"
+    },
+    "price": {
+      "type": "number",
+      "description": "Precio del producto"
+    },
+    "category": {
+      "type": "string",
+      "description": "Categor\u00eda del producto"
+    },
+    "sku": {
+      "type": "string",
+      "description": "C\u00f3digo SKU"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Producto disponible"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL de imagen del producto"
+    }
+  },
+  "required": [
+    "name",
+    "price"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Warehouse",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre del almac\u00e9n"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripci\u00f3n del almac\u00e9n"
+    },
+    "assigned_users": {
+      "type": "array",
+      "description": "Emails de usuarios asignados",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

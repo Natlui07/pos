@@ -1,0 +1,63 @@
+{
+  "name": "TicketConfig",
+  "type": "object",
+  "properties": {
+    "business_name": {
+      "type": "string",
+      "description": "Nombre del negocio"
+    },
+    "address": {
+      "type": "string",
+      "description": "Direcci\u00f3n del negocio"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Tel\u00e9fono del negocio"
+    },
+    "rfc": {
+      "type": "string",
+      "description": "RFC del negocio"
+    },
+    "footer_message": {
+      "type": "string",
+      "description": "Mensaje al pie del ticket"
+    },
+    "show_cashier": {
+      "type": "boolean",
+      "default": true
+    },
+    "show_waiter": {
+      "type": "boolean",
+      "default": true
+    },
+    "show_date": {
+      "type": "boolean",
+      "default": true
+    },
+    "show_tax": {
+      "type": "boolean",
+      "default": true
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "URL del logo"
+    },
+    "custom_fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "business_name"
+  ]
+}
